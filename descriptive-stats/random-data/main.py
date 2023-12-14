@@ -1,4 +1,4 @@
-from distributions.random_data_generator import generate_uniform_data, generate_normal_data, generate_exponential_data
+from random_data_generator import generate_uniform_data, generate_normal_data, generate_exponential_data
 
 # Generate random data from a uniform distribution
 uniform_data = generate_uniform_data(100, low=0, high=10)
