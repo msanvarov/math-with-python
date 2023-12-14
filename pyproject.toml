@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "math-with-python"
+version = "0.1.0"
+description = "Modern math and statistic strategies with Python"
+authors = ["Sal <msalanvarov@gmail.com>"]
+readme = "README.md"
+packages = [{include = "math_with_python"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.26.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
