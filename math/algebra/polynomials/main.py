@@ -1,5 +1,5 @@
 import sympy as sym
-from sympy.abc import x
+from sympy.abc import x, y
 
 def latex_to_html(latex_str, filename):
     html_content = f"""

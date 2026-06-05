@@ -1,11 +1,27 @@
-To generate QQ plots in Python, we can use the `statsmodels` library. QQ plots are used to compare the quantiles of a dataset against the quantiles of a theoretical distribution, typically the normal distribution. This allows us to visually assess if the dataset follows a particular distribution.
+# QQ Plots
 
-To create QQ plots, we need to follow these steps:
+A quantile-quantile (QQ) plot compares the quantiles of a dataset against the quantiles of a theoretical distribution. If the points fall close to the 45-degree reference line, the dataset is well approximated by that distribution.
 
-1. Import the necessary libraries.
-2. Generate a random dataset or load an existing dataset.
-3. Fit a theoretical distribution to the dataset.
-4. Calculate the quantiles of the dataset and the theoretical distribution.
-5. Plot the quantiles on a scatter plot.
+## Concepts
 
-Let's start by creating the entrypoint file `qq_plot.py`
+- **Quantile** — a cut point that divides the data into intervals of equal probability.
+- **Reference line** — the 45-degree line representing a perfect match between observed and theoretical quantiles.
+- **Heavy tails / skew** — systematic deviation from the reference line at the ends of the plot indicates tail behavior or skew not captured by the chosen distribution.
+
+## How to read a QQ plot
+
+1. Generate or load a dataset.
+2. Pick a theoretical distribution (normal by default).
+3. Plot the sample quantiles against the theoretical quantiles.
+4. Compare the resulting curve to the 45-degree line.
+
+## Files
+
+- `qq_plot.py` — `generate_qq_plot(data, dist='norm')`, built on `statsmodels.ProbPlot` and `scipy.stats`.
+- `main.py` — example usage on 1,000 samples drawn from a standard normal.
+
+## Usage
+
+```bash
+python stats/descriptive-stats/qq_plots/main.py
+```
